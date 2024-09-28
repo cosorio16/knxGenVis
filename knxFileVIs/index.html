@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extraer XML de .knxproj</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+  <h1>Extraer XML de .knxproj</h1>
+  <input type="file" id="fileInput" accept=".knxproj">
+  <div id="output"></div>
+
+  <script>
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        // Lee el archivo como un array de bytes
+        reader.onload = function(e) {
+          const arrayBuffer = e.target.result;
+
+          // Usa JSZip para cargar el archivo y extraer su contenido
+          JSZip.loadAsync(arrayBuffer).then(function(zip) {
+            // Itera a través de los archivos en el ZIP
+            zip.forEach(function(relativePath, zipEntry) {
+              // Solo muestra los archivos .xml
+              if (zipEntry.name.endsWith('.xml')) {
+                zipEntry.async("string").then(function(fileData) {
+                  // Mostrar el contenido XML en la consola o en la página
+                  console.log("Contenido del archivo XML:", fileData);
+                  document.getElementById('output').innerHTML += `<h3>${zipEntry.name}</h3><pre>${fileData}</pre>`;
+                });
+              }
+            });
+          });
+        };
+
+        reader.readAsArrayBuffer(file); // Lee el archivo .knxproj como array buffer
+      }
+    });
+  </script>
+</body>
+</html>

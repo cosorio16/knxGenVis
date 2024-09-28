@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KNX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CreatedBy="ETS5" ToolVersion="5.7.1428.39779" xmlns="http://knx.org/xml/project/20">
+  <Project Id="P-0441">
+    <Installations>
+      <Installation Name="" BCUKey="4294967295" DefaultLine="P-0441-0_L-3" IPRoutingLatencyTolerance="2000">
+        <Topology>
+          <Area Id="P-0441-0_A-1" Address="0" Name="Backbone area" Puid="1">
+            <Line Id="P-0441-0_L-1" Address="0" Name="Backbone line" MediumTypeRefId="MT-5" Puid="2" />
+          </Area>
+          <Area Id="P-0441-0_A-2" Address="1" Name="New area" Puid="3">
+            <Line Id="P-0441-0_L-2" Address="0" Name="Main line" MediumTypeRefId="MT-5" Puid="4" />
+            <Line Id="P-0441-0_L-3" Address="1" Name="New line" MediumTypeRefId="MT-0" Puid="5" />
+          </Area>
+        </Topology>
+        <Locations>
+          <Space Type="Building" Id="P-0441-0_BP-1" Name="New project" Puid="6" />
+        </Locations>
+        <GroupAddresses>
+          <GroupRanges>
+            <GroupRange Id="P-0441-0_GR-1" RangeStart="1" RangeEnd="2047" Name="New main group" Puid="11" />
+            <GroupRange Id="P-0441-0_GR-2" RangeStart="2048" RangeEnd="4095" Name="New main group" Puid="12" />
+            <GroupRange Id="P-0441-0_GR-3" RangeStart="4096" RangeEnd="6143" Name="New main group" Puid="13" />
+            <GroupRange Id="P-0441-0_GR-4" RangeStart="6144" RangeEnd="8191" Name="New main group" Puid="14" />
+            <GroupRange Id="P-0441-0_GR-5" RangeStart="8192" RangeEnd="10239" Name="New main group" Puid="15" />
+            <GroupRange Id="P-0441-0_GR-6" RangeStart="10240" RangeEnd="12287" Name="New main group" Puid="16" />
+            <GroupRange Id="P-0441-0_GR-7" RangeStart="12288" RangeEnd="14335" Name="New main group" Puid="17" />
+            <GroupRange Id="P-0441-0_GR-8" RangeStart="14336" RangeEnd="16383" Name="New main group" Puid="18" />
+          </GroupRanges>
+        </GroupAddresses>
+      </Installation>
+    </Installations>
+  </Project>
+</KNX>

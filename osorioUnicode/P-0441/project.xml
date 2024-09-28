@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KNX xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CreatedBy="ETS5" ToolVersion="5.7.1428.39779" xmlns="http://knx.org/xml/project/20">
+  <Project Id="P-0441">
+    <ProjectInformation Name="New project" GroupAddressStyle="ThreeLevel" LastModified="2024-09-28T16:27:24.9948046Z" ProjectStart="2024-09-28T16:07:31.0695201Z" Comment="" CompletionStatus="Editing" CodePage="utf-8" LastUsedPuid="18" Guid="e046d866-041b-4985-b10a-4409ec4f1454" />
+  </Project>
+</KNX>
